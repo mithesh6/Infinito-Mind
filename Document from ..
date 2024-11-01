@@ -1,99 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinito Mind - Transforming Education</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Navbar -->
-    <header class="navbar">
-        <img src="Logo.jpg" alt="Infinito Mind Logo" class="logo">
-        <h1 class="company-name">INFINITO MIND</h1>
-        <p class="tagline">Transforming Education</p>
-    </header>
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- About Section -->
-    <section class="about">
-        <h2>About Us</h2>
-        <p>Founded by K. Munesh Kumar and K. Priyanka, INFINITO MIND is dedicated to reshaping education through immersive technology.</p>
-    </section>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
 
-    <!-- Services Section -->
-    <section class="services">
-        <h2>Our Services</h2>
+/* Navbar Styling */
+.navbar {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        <div class="service" id="ar-vr">
-            <h3>AR/VR Technology in Education</h3>
-            <p>Infinito Mind is an innovative ed-tech company committed to revolutionizing education by integrating cutting-edge Augmented Reality (AR) and Virtual Reality technologies. Our solutions seamlessly align with the school curriculum, offering an immersive and interactive learning experience that enhances student engagement and deepens understanding.</p>
-        </div>
+.logo {
+    width: 120px;
+    height: 60px;
+    float: left;
+}
 
-        <div class="service" id="apex-prep">
-            <h3>Apex Prep</h3>
-            <p>Integrating Competitive Syllabus with Liberal Arts Curricula to offer a balanced educational approach.</p>
-        </div>
+@keyframes logo-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
 
-        <div class="service" id="learners-persona">
-            <h3>Learners Persona</h3>
-            <p>Providing comprehensive student profiling to personalize learning paths and maximize student potential.</p>
-        </div>
-    </section>
+.company-name {
+    font-size: 1.8em;
+    font-weight: bold;
+}
 
-    <!-- Footer -->
-    <!-- Footer -->
-<footer class="footer">
-    <div class="footer-container">
-        <!-- Company Info -->
-        <div class="footer-section company-info">
-            <h3>INFINITO MIND</h3>
-            <p>Transforming Education through innovative technology. We integrate AR/VR in education, offer competitive curriculum solutions, and provide personalized student profiling.</p>
-            <p>© 2024 INFINITO MIND. All rights reserved.</p>
-        </div>
+.tagline {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 10px;
+    animation: logo-bounce 2s infinite;
+}
 
-        <!-- Quick Links -->
-        <div class="footer-section quick-links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </div>
+/* About Section */
+.about {
+    padding: 40px;
+    text-align: center;
+    background-color: #ecf0f1;
+}
 
-        <!-- Contact Info -->
-        <div class="footer-section contact-info">
-            <h4>Contact Us</h4>
-            <p>Email: <a href="mailto:info@infinitomind.com">info@infinitomind.com</a></p>
-            <p>Phone: +1 (234) 567-8901</p>
-            <p>Address: 1234 Innovation Road, Tech City, USA</p>
-        </div>
+.about h2 {
+    margin-bottom: 20px;
+}
 
-        <!-- Newsletter -->
-        <div class="footer-section newsletter">
-            <h4>Stay Updated</h4>
-            <p>Subscribe to our newsletter for the latest updates on educational technology.</p>
-            <form id="newsletter-form">
-                <input type="email" placeholder="Your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
+/* Services Section */
+.services {
+    padding: 40px;
+}
 
-        <!-- Social Media -->
-        <div class="footer-section social-media">
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-                <a href="#" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
-                <a href="#" class="social-icon"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-                <a href="#" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a>
-            </div>
-        </div>
-    </div>
-</footer>
+.services h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.service {
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 4px solid #34495e;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.service:hover {
+    background-color: #f0f4f7;
+}
+
+.service h3 {
+    text-decoration: underline;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.service p {
+    color: #555;
+}
+
+/* Footer */
+/* Footer Styling */
+.footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 40px 20px;
+    font-size: 0.9em;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 20px;
+}
+
+.footer h3, .footer h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer p, .footer a, .footer ul {
+    margin: 5px 0;
+    color: #bdc3c7;
+}
+
+.footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #1abc9c;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 5px 0;
+}
+
+/* Newsletter */
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+    outline: none;
+    width: 70%;
+}
+
+.newsletter button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: #1abc9c;
+    color: #ecf0f1;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #16a085;
+}
+
+/* Social Media Icons */
+.social-media .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.social-icon img:hover {
+    filter: grayscale(0%);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+}
